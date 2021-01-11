@@ -1,8 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
     background-image: url("https://i.pinimg.com/originals/ff/cc/2a/ffcc2ac60d849dc43cbfcc3fca32a406.jpg");
-    background-size: auto 850px;
     background-repeat: no-repeat;
     font-size: 200%;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
 }
 
 .color-layer {
@@ -22,7 +28,9 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     border: 1px solid white;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 .background {
@@ -32,12 +40,13 @@ body {
     margin: 0 auto;
     width: 90%;
     padding: 0;
+    border: 1px solid white;
 }
 
 .game-name {
     font-size: 100px;
     color: white;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -52,9 +61,10 @@ body {
 
 .start-btns-container {
     margin: 0 auto;
-    width: 800px;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    border: 1px solid white;
 }
 
 .start-btns {
