@@ -1,0 +1,107 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/ff/cc/2a/ffcc2ac60d849dc43cbfcc3fca32a406.jpg");
+    background-size: auto 850px;
+    background-repeat: no-repeat;
+    font-size: 200%;
+}
+
+.color-layer {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 0;
+}
+
+.intro-screen {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid white;
+    height: 100vh;
+}
+
+.background {
+    font-family: "Potta One";
+    color: white;
+    font-size: 1em;
+    margin: 0 auto;
+    width: 90%;
+    padding: 0;
+}
+
+.game-name {
+    font-size: 100px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Josefin Sans";
+}
+
+.title-words {
+    display: block;
+    margin: 0 25px;
+}
+
+.start-btns-container {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-btns {
+    font-family: "Potta One";
+    font-size: 30px;
+    height: 100px;
+    width: 250px;
+    background-color: #fdff5c;
+    color: red;
+    border: none;
+    border-radius: 15px;
+    font-family: "Anton";
+    letter-spacing: 2px;
+}
+
+.start-btns:hover {
+    cursor: pointer;
+}
+
+#machine {
+    font-size: 1.2em;
+    font-family: monospace;
+}
+
+
+
+.disappear {
+    display: none
+}
+
+.delete-bgrnd {
+    background: none;
+}
+
+#quit-screen {
+    height: 100vh;
+}
+
+#chicken{
+    display: block;
+    width: 650px;
+    margin: 0 auto;
+}
+#admonishment {
+    font-size: 40px;
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+}
+
