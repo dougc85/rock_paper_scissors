@@ -8,29 +8,53 @@ console.log(quitButton);
 
 const introPage = document.getElementById('intro'); 
 const quitPage = document.getElementById('quit-screen');
-const colorScreen = document.getElementById('color-screen')
+const colorScreen = document.getElementById('color-screen');
+const choicePage = document.getElementById('choice-screen');
+const throwPage = document.getElementById('throw-id');
 
 startButton.addEventListener('click', startGame);
 quitButton.addEventListener('click', quitGame);
 
 function startGame(e) {
-    return;
+    introPage.classList.toggle('disappear');
+    choicePage.classList.toggle('disappear');
 }
 
 function quitGame(e) {
     introPage.classList.toggle('disappear');
     colorScreen.classList.toggle('disappear');
-    document.body.classList.toggle('delete-bgrnd');
+    document.getElementById('screen-background').classList.toggle('disappear');
     quitPage.classList.toggle('disappear');
 }
 
 
+let rockRound = false;
+let paperRound = false;
+let scissorsRound = false;
+let tieRound = false;
+
+const rockChoice = document.getElementById("rock-choice");
+const paperChoice = document.getElementById("paper-choice");
+const scissorsChoice = document.getElementById("scissors-choice");
 
 
+document.getElementById("hands-box").addEventListener("click", whichThrow);
 
+function whichThrow(e) {
+    if (e.target === rockChoice) {
+        rockRound = true;
+    }else if (e.target === paperChoice) {
+        paperRound = true;
+    }else if (e.target === scissorsChoice) {
+        scissorsRound = true;
+    }
+    showThrows();
+}
 
-
-
+function showThrows () {
+    choicePage.classList.toggle('disappear');
+    throwPage.classList.toggle('disappear');
+}
 
 
 
