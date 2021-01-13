@@ -208,16 +208,16 @@ async function playRound(e) {
         await sleep(1000);
     }
 
-    for (let i = 0; i < appearingItemsLength; i++) {
-        appearingItems[i].classList.toggle('make-visible');
-    }
-
     //Array of [winner, throw-winner, message]
     let results = determineWinner(player, cpu);
 
     showResults(results);
 
     await sleep(500);
+
+    for (let i = 0; i < appearingItemsLength; i++) {
+        appearingItems[i].classList.toggle('make-visible');
+    }
     
     throwPage.classList.toggle('disappear');
     if (results[0] === 'tie') {
