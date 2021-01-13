@@ -96,14 +96,11 @@ body {
     cursor: pointer;
 }
 
-#machine {
+.machine {
     font-size: 1.2em;
     font-family: monospace;
+    color: indianred;
 }
-
-
-
-
 
 .delete-bgrnd {
     background: none;
@@ -162,14 +159,6 @@ body {
     margin-bottom: 40px;
 }
 
-#blank-throws h2 {
-}
-
-#cpu-throws {
-    width: 300px;
-    text-align: center;
-}
-
 #weapon-thrown {
     display: flex;
     justify-content: space-around;
@@ -182,9 +171,161 @@ body {
     box-shadow: 4px 5px 45px red;
 }
 
+.appearing-items {
+    visibility: hidden;
+}
+
+#cpu-throws {
+    width: 300px;
+    text-align: center;
+}
+
+.tie-img {
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 30%;
+}
+
+#tie-screen h2 {
+    color: white;
+    max-width: 650px;
+}
+
+.scissors-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#scissors-loser {
+    height: 300px;
+    border-radius: 50%;
+}
+
+.fight-picture {
+    width: 400px;
+    margin: 0 50px;
+}
+
+#scissors-winner {
+    height: 300px;
+    border-radius: 50%;
+}
+
+#scissors-screen h1 {
+    color: white;
+    text-align: center;
+}
+
+.paper-rock-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#paper-or-rock-winner {
+    height: 175px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+
+.fight-two {
+    width: 400px;
+    margin: 30px auto;
+    display: block;
+}
+
+#paper-or-rock-loser {
+    height: 175px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+#paper-or-rock-screen h1 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#score-screen {
+    width: 80%;
+    margin: 40px auto;
+}
+#score-screen h1 {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+    width: 65%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 15px;
+}
+
+.player-score {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.cpu-score {
+    font-size: 50px;
+    text-align: center;
+}
+
+.cpu-score h3 {
+    color: white;
+    font-size: 40px;
+}
+
+#lose-screen {
+    color: white;
+}
+
+#lose-screen img {
+    display: block;
+}
+
+#win-screen {
+    color: white;
+}
+
+#win-screen img {
+    display: block;
+}
+
+#final-screen h3 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.make-visible {
+    visibility: visible;
+}
+
 .disappear {
     display: none
 }
 
-visibility: hidden;
+
+
+
 
