@@ -134,9 +134,9 @@ const injuredCpuImages = ["images/injuredcpu1.jpg", "images/injuredcpu2.jpg", "i
 const injuredPersonImages = ["images/injuredperson1.jpg", "images/injuredperson2.jpg", "images/injuredperson3.jpg"];
 
 function showResults(results) {
-    if (results[0] === 'tie') {
-        tiePage.classList.toggle('disappear');
-        return;
+    
+    if (results[0] == "tie") {
+        return
     } else if (results[1] === 'Scissors cut Paper.') {
         if (results[0] === 'You win!') {
             scissorsPage.querySelector("#scissors-loser").setAttribute("src", injuredCpuImages[(playerScore - 1)]);
@@ -220,14 +220,13 @@ async function playRound(e) {
     await sleep(500);
     
     throwPage.classList.toggle('disappear');
-    if (results[1] === 'Scissors cut Paper.') {
+    if (results[0] === 'tie') {
+        tiePage.classList.toggle('disappear');
+    } else if (results[1] === 'Scissors cut Paper.') {
         scissorsPage.classList.toggle('disappear');
     } else if ((results[1] === 'Rock crushes Scissors.') || (results[1] === 'Paper covers Rock.')) {
         paperOrRockPage.classList.toggle('disappear');
     }
-
-
-
 
     await sleep(3000);
 
