@@ -150,7 +150,6 @@ function showResults(results) {
         }
         scissorsPage.querySelector(".win-message").textContent = results[0];
         scissorsPage.querySelector(".win-description").textContent = results[1];
-        scissorsPage.classList.toggle('disappear');
         return;
     } else {
         console.log('halp!');
@@ -170,7 +169,6 @@ function showResults(results) {
         paperOrRockPage.querySelector(".win-message").textContent = results[0];
         paperOrRockPage.querySelector(".win-description").textContent = results[1];
         paperOrRockPage.querySelector(".fight-picture").setAttribute('src', fightImage);
-        paperOrRockPage.classList.toggle('disappear');
         return;
     }
 }
@@ -221,7 +219,15 @@ async function playRound(e) {
     let results = determineWinner(player, cpu);
 
     showResults(results);
+
+    await sleep(1000);
     
+    if (results[1] === 'Scissors cut Paper.') {
+        scissorsPage.classList.toggle('disappear');
+    } else if ((results[1] === 'Rock crushes Scissors.') || (results[1] === 'Paper covers Rock.')) {
+        paperOrRockPage.classList.toggle('disappear');
+    }
+
     await sleep(3000);
 
     removeResults(results);
