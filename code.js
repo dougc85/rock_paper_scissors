@@ -170,6 +170,7 @@ function showResults(results) {
         paperOrRockPage.querySelector(".win-message").textContent = results[0];
         paperOrRockPage.querySelector(".win-description").textContent = results[1];
         paperOrRockPage.querySelector(".fight-picture").setAttribute('src', fightImage);
+        paperOrRockPage.classList.toggle('disappear');
         return;
     }
 }
@@ -220,10 +221,6 @@ async function playRound(e) {
     let results = determineWinner(player, cpu);
 
     showResults(results);
-
-    await sleep(300);
-
-    paperOrRockPage.classList.toggle('disappear');
     
     await sleep(3000);
 
