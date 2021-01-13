@@ -131,7 +131,7 @@ function determineWinner(playerSelection, computerSelection) {
 }
 
 const injuredCpuImages = ["images/injuredcpu1.jpg", "images/injuredcpu2.jpg", "images/injuredcpu3.jpg"];
-const injuredPersonImages = ["images/injuredperson1.jpg", "images/injuredperson2.png", "images/injuredperson3.png"];
+const injuredPersonImages = ["images/injuredperson1.jpg", "images/injuredperson2.jpg", "images/injuredperson3.jpg"];
 
 function showResults(results) {
     throwPage.classList.toggle('disappear');
@@ -146,7 +146,7 @@ function showResults(results) {
         }
         else {
             scissorsPage.querySelector("#scissors-loser").setAttribute("src", injuredPersonImages[(cpuScore - 1)]);
-            scissorsPage.querySelector("#scissors-winner").setAttribute("src", "images/cpuwinsscissors.png");
+            scissorsPage.querySelector("#scissors-winner").setAttribute("src", "images/cpuwinsscissors.jpg");
         }
         scissorsPage.querySelector(".win-message").textContent = results[0];
         scissorsPage.querySelector(".win-description").textContent = results[1];
@@ -156,7 +156,7 @@ function showResults(results) {
         console.log('halp!');
         let personWinsImage = (results[1] == 'Rock crushes Scissors.') ? "images/personwinsrock.jpg" : "images/personwinspaper.jpg";
         let cpuWinsImage = (results[1] == 'Rock crushes Scissors.') ? "images/cpuwinsrock.jpg" : "images/cpuwinspaper.jpg";
-        let fightImage = (results[1] == 'Rock crushes Scissors.') ? "images/rockonscissors.jpg" : "images/paperonrock.jpeg";
+        let fightImage = (results[1] == 'Rock crushes Scissors.') ? "images/rockonscissors.jpg" : "images/paperonrock.jpg";
 
         if (results[0] === 'You win!') {
             paperOrRockPage.querySelector("#paper-or-rock-loser").setAttribute("src", injuredCpuImages[(playerScore - 1)]);
