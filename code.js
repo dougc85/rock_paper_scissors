@@ -134,8 +134,6 @@ const injuredCpuImages = ["images/injuredcpu1.jpg", "images/injuredcpu2.jpg", "i
 const injuredPersonImages = ["images/injuredperson1.jpg", "images/injuredperson2.jpg", "images/injuredperson3.jpg"];
 
 function showResults(results) {
-    throwPage.classList.toggle('disappear');
-
     if (results[0] === 'tie') {
         tiePage.classList.toggle('disappear');
         return;
@@ -209,7 +207,6 @@ async function playRound(e) {
         appearingItems[i].classList.toggle('make-visible');
         await sleep(1000);
     }
-    await sleep(400);
 
     for (let i = 0; i < appearingItemsLength; i++) {
         appearingItems[i].classList.toggle('make-visible');
@@ -220,13 +217,17 @@ async function playRound(e) {
 
     showResults(results);
 
-    await sleep(1000);
+    await sleep(500);
     
+    throwPage.classList.toggle('disappear');
     if (results[1] === 'Scissors cut Paper.') {
         scissorsPage.classList.toggle('disappear');
     } else if ((results[1] === 'Rock crushes Scissors.') || (results[1] === 'Paper covers Rock.')) {
         paperOrRockPage.classList.toggle('disappear');
     }
+
+
+
 
     await sleep(3000);
 
