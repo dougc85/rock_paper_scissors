@@ -169,6 +169,7 @@ body {
     display: block;
     width: 300px;
     box-shadow: 4px 5px 45px red;
+    height: intrinsic;
 }
 
 .appearing-items {
@@ -185,7 +186,7 @@ body {
     width: 350px;
     margin: 0 auto;
     margin-top: 40px;
-    border-radius: 30%;
+    border-radius: 20%;
 }
 
 #tie-screen h2 {
