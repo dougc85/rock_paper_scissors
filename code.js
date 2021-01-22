@@ -200,6 +200,10 @@ async function playRound(e) {
     let player = humanPlay(e);
     let cpu = computerPlay();
 
+    if (cpu === player) {
+        cpu = computerPlay();
+    }
+
     choicePage.classList.toggle('disappear');
     throwPage.classList.toggle('disappear');
     await sleep(500);
