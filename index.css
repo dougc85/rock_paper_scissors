@@ -1,5 +1,331 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.screen-background {
+  background-image: url("https://i.pinimg.com/originals/ff/cc/2a/ffcc2ac60d849dc43cbfcc3fca32a406.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.color-layer {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.intro-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.background {
+  text-align: center;
+  font-family: "Potta One";
+  font-size: 2.2vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 90%;
+  padding: 0;
+}
+
+.game-name {
+  font-size: 90px;
+  margin: 60px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Josefin Sans";
+}
+
+.title-words {
+  display: block;
+  margin: 0 25px;
+}
+
+.start-btns-container {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.start-btns {
+  font-size: 30px;
+  height: 100px;
+  width: 250px;
+  background-color: #fdff5c;
+  color: red;
+  border: none;
+  border-radius: 15px;
+  font-family: "Anton";
+  letter-spacing: 2px;
+}
+
+.start-btns:hover {
+  cursor: pointer;
+}
+
+.machine {
+  font-size: 1.2em;
+  font-family: monospace;
+  color: indianred;
+}
+
+.delete-bgrnd {
+  background: none;
+}
+
+.quit-screen {
+  height: 100vh;
+}
+
+.chicken {
+  display: block;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.admonishment {
+  color: #000;
+  font-size: 40px;
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.choose {
+  font-family: "Potta One";
+  text-align: center;
+}
+
+.hands {
+  width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 60px auto;
+  box-shadow: 4px 5px 80px #fff;
+  box-shadow: -4px -5px 80px #fff;
+  cursor: pointer;
+}
+
+.throw-screen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.throws-container {
+  flex-basis: 100%;
+}
+
+.blank-throws {
+  font-family: "Josefin Sans";
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.weapon-thrown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.weapon-thrown img {
+  display: block;
+  width: 300px;
+  box-shadow: 4px 5px 45px red;
+  height: intrinsic;
+}
+
+.appearing-items {
+  visibility: hidden;
+}
+
+.cpu-throws {
+  width: 300px;
+  text-align: center;
+}
+
+.tie-img {
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 20%;
+}
+
+.tie-screen h2 {
+  max-width: 650px;
+}
+
+.scissors-container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.scissors-loser {
+  height: 300px;
+  border-radius: 50%;
+}
+
+.fight-picture {
+  width: 400px;
+  margin: 0 50px;
+}
+
+.scissors-winner {
+  height: 300px;
+  border-radius: 50%;
+}
+
+.scissors-screen h1 {
+  text-align: center;
+}
+
+.paper-rock-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paper-or-rock-winner {
+  height: 175px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+
+.fight-two {
+  width: 400px;
+  margin: 30px auto;
+  display: block;
+}
+
+.paper-or-rock-loser {
+  height: 175px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.paper-or-rock-screen h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.score-screen {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.score-screen h1 {
+  font-size: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 65%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 40px;
+}
+
+.cpu-score {
+  font-size: 50px;
+  text-align: center;
+}
+
+.cpu-score h3 {
+  font-size: 40px;
+}
+
+.lose-screen img {
+  display: block;
+}
+
+.win-screen img {
+  display: block;
+}
+
+.final-screen h3 {
+  color: #000;
+  font-size: 80px;
+  text-align: center;
+}
+
+.make-visible {
+  visibility: visible;
+}
+
+.disappear {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

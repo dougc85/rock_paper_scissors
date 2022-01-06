@@ -3,20 +3,33 @@
 // -Doug Carter
 
 
-const startButton = document.getElementById('start');
-const quitButton = document.getElementById('quit');
-const introPage = document.getElementById('intro');
-const quitPage = document.getElementById('quit-screen');
-const colorScreen = document.getElementById('color-screen');
-const choicePage = document.getElementById('choice-screen');
-const throwPage = document.getElementById('throw-id');
-const tiePage = document.getElementById('tie-screen');
-const scissorsPage = document.getElementById('scissors-screen');
-const paperOrRockPage = document.getElementById("paper-or-rock-screen");
-const scorePage = document.getElementById("score-screen");
-const losePage = document.getElementById("lose-screen");
-const winPage = document.getElementById("win-screen");
-const finalPage = document.getElementById("final-screen");
+const screenBackground = document.querySelector('.screen-background');
+const startButton = document.querySelector('.start');
+const quitButton = document.querySelector('.quit');
+const introScreen = document.querySelector('.intro-screen');
+const quitScreen = document.querySelector('.quit-screen');
+const colorLayer = document.querySelector('.color-layer');
+
+const handsBox = document.querySelector('.hands-box');
+const choiceScreen = document.querySelector('.choice-screen');
+const throwScreen = document.querySelector('throw-screen');
+const tieScreen = document.querySelector('.tie-screen');
+
+const scissorsScreen = document.querySelector('.scissors-screen');
+const scissorsLoser = scissorsScreen.querySelector('#scissors-loser');
+const scissorsWinner = scissorsScreen.querySelector('#scissors-winner');
+
+
+const paperOrRockScreen = document.querySelector(".paper-or-rock-screen");
+const paperOrRockLoser = paperOrRockScreen.querySelector('.paper-or-rock-loser');
+const paperOrRockWinner = paperOrRockScreen.querySelector('.paper-or-rock-winner');
+
+
+
+const scoreScreen = document.querySelector(".score-screen");
+const loseScreen = document.querySelector(".lose-screen");
+const winScreen = document.querySelector(".win-screen");
+const finalScreen = document.querySelector(".final-screen");
 
 //Events for Intro Page
 startButton.addEventListener('click', startGame);
@@ -27,30 +40,31 @@ document.addEventListener('keyup', restart);
 
 //Functions for Intro Page
 function startGame(e) {
-    introPage.classList.toggle('disappear');
-    choicePage.classList.toggle('disappear');
+    console.log('pooping');
+    introScreen.classList.toggle('disappear');
+    choiceScreen.classList.toggle('disappear');
 }
 
 function quitGame(e) {
-    introPage.classList.toggle('disappear');
-    colorScreen.classList.toggle('disappear');
-    document.getElementById('screen-background').classList.toggle('disappear');
-    quitPage.classList.toggle('disappear');
+    introScreen.classList.toggle('disappear');
+    colorLayer.classList.toggle('disappear');
+    screenBackground.classList.toggle('disappear');
+    quitScreen.classList.toggle('disappear');
 }
 
 //Constants for Choice Page
-const rockChoice = document.getElementById("rock-choice");
-const paperChoice = document.getElementById("paper-choice");
-const scissorsChoice = document.getElementById("scissors-choice");
+const rockChoice = document.querySelector(".rock-choice");
+const paperChoice = document.querySelector(".paper-choice");
+const scissorsChoice = document.querySelector(".scissors-choice");
 
 //Event for player choosing weapon
-document.getElementById("hands-box").addEventListener("click", playRound);
+handsBox.addEventListener("click", playRound);
 
 //Constants for Throw page - 
-const playerThrows = document.getElementById('player-throws');
-const cpuThrows = document.getElementById('cpu-throws');
-const playerWeapon = document.getElementById('player-weapon');
-const cpuWeapon = document.getElementById('cpu-weapon');
+const playerThrows = document.querySelector('.player-throws');
+const cpuThrows = document.querySelector('.cpu-throws');
+const playerWeapon = document.querySelector('.player-weapon');
+const cpuWeapon = document.querySelector('.cpu-weapon');
 
 //Array of elements of Throw page - used for timed reveal
 let appearingItems = [playerThrows, playerWeapon, cpuThrows, cpuWeapon];
@@ -139,15 +153,15 @@ function showResults(results) {
         return
     } else if (results[1] === 'Scissors cut Paper.') {
         if (results[0] === 'You win!') {
-            scissorsPage.querySelector("#scissors-loser").setAttribute("src", injuredCpuImages[(playerScore - 1)]);
-            scissorsPage.querySelector("#scissors-winner").setAttribute("src", "images/personwinsscissors.jpg");
+            scissorsLoser.setAttribute("src", injuredCpuImages[(playerScore - 1)]);
+            scissorsWinner.setAttribute("src", "images/personwinsscissors.jpg");
         }
         else {
-            scissorsPage.querySelector("#scissors-loser").setAttribute("src", injuredPersonImages[(cpuScore - 1)]);
-            scissorsPage.querySelector("#scissors-winner").setAttribute("src", "images/cpuwinsscissors.jpg");
+            scissorsLoser.setAttribute("src", injuredPersonImages[(cpuScore - 1)]);
+            scissorsWinner.setAttribute("src", "images/cpuwinsscissors.jpg");
         }
-        scissorsPage.querySelector(".win-message").textContent = results[0];
-        scissorsPage.querySelector(".win-description").textContent = results[1];
+        scissorsScreen.querySelector(".win-message").textContent = results[0];
+        scissorsScreen.querySelector(".win-description").textContent = results[1];
         return;
     } else {
         let personWinsImage = (results[1] == 'Rock crushes Scissors.') ? "images/personwinsrock.jpg" : "images/personwinspaper.jpg";
@@ -155,17 +169,17 @@ function showResults(results) {
         let fightImage = (results[1] == 'Rock crushes Scissors.') ? "images/rockonscissors.jpg" : "images/paperonrock.jpg";
 
         if (results[0] === 'You win!') {
-            paperOrRockPage.querySelector("#paper-or-rock-loser").setAttribute("src", injuredCpuImages[(playerScore - 1)]);
-            paperOrRockPage.querySelector("#paper-or-rock-winner").setAttribute("src", personWinsImage);
+            paperOrRockLoser.setAttribute("src", injuredCpuImages[(playerScore - 1)]);
+            paperOrRockWinner.setAttribute("src", personWinsImage);
         }
         else {
-            paperOrRockPage.querySelector("#paper-or-rock-loser").setAttribute("src", injuredPersonImages[(cpuScore - 1)]);
-            paperOrRockPage.querySelector("#paper-or-rock-winner").setAttribute("src", cpuWinsImage);
+            paperOrRockLoser.setAttribute("src", injuredPersonImages[(cpuScore - 1)]);
+            paperOrRockWinner.setAttribute("src", cpuWinsImage);
         }
 
-        paperOrRockPage.querySelector(".win-message").textContent = results[0];
-        paperOrRockPage.querySelector(".win-description").textContent = results[1];
-        paperOrRockPage.querySelector(".fight-picture").setAttribute('src', fightImage);
+        paperOrRockScreen.querySelector(".win-message").textContent = results[0];
+        paperOrRockScreen.querySelector(".win-description").textContent = results[1];
+        paperOrRockScreen.querySelector(".fight-picture").setAttribute('src', fightImage);
         return;
     }
 }
@@ -173,26 +187,26 @@ function showResults(results) {
 function removeResults(results) {
 
     if (results[0] === 'tie') {
-        tiePage.classList.toggle('disappear');
+        tieScreen.classList.toggle('disappear');
         return;
     } else if (results[1] === 'Scissors cut Paper.') {
-        scissorsPage.classList.toggle('disappear');
+        scissorsScreen.classList.toggle('disappear');
     } else {
-        paperOrRockPage.classList.toggle('disappear');
+        paperOrRockScreen.classList.toggle('disappear');
     }
 }
 
 function showScore() {
 
-    scorePage.querySelector(".player-score h3").textContent = playerScore;
-    scorePage.querySelector(".cpu-score h3").textContent = cpuScore;
-    scorePage.classList.toggle("disappear");
+    scoreScreen.querySelector(".player-score h3").textContent = playerScore;
+    scoreScreen.querySelector(".cpu-score h3").textContent = cpuScore;
+    scoreScreen.classList.toggle("disappear");
 }
 
 //Plays a round and then resets to the Choice Page or End Page
 async function playRound(e) {
 
-    if (e.target === document.getElementById("hands-box")) {
+    if (e.target === handsBox) {
         return;
     }
 
@@ -203,8 +217,8 @@ async function playRound(e) {
         cpu = computerPlay();
     }
 
-    choicePage.classList.toggle('disappear');
-    throwPage.classList.toggle('disappear');
+    choiceScreen.classList.toggle('disappear');
+    throwScreen.classList.toggle('disappear');
     await sleep(500);
     for (let i = 0; i < appearingItemsLength; i++) {
         appearingItems[i].classList.toggle('make-visible');
@@ -222,13 +236,13 @@ async function playRound(e) {
         appearingItems[i].classList.toggle('make-visible');
     }
 
-    throwPage.classList.toggle('disappear');
+    throwScreen.classList.toggle('disappear');
     if (results[0] === 'tie') {
-        tiePage.classList.toggle('disappear');
+        tieScreen.classList.toggle('disappear');
     } else if (results[1] === 'Scissors cut Paper.') {
-        scissorsPage.classList.toggle('disappear');
+        scissorsScreen.classList.toggle('disappear');
     } else if ((results[1] === 'Rock crushes Scissors.') || (results[1] === 'Paper covers Rock.')) {
-        paperOrRockPage.classList.toggle('disappear');
+        paperOrRockScreen.classList.toggle('disappear');
     }
 
     await sleep(3000);
@@ -238,45 +252,45 @@ async function playRound(e) {
 
     await sleep(2000);
 
-    scorePage.classList.toggle("disappear");
+    scoreScreen.classList.toggle("disappear");
 
     if (cpuScore >= 3) {
         cpuScore = 0;
         playerScore = 0;
-        losePage.classList.toggle("disappear");
+        loseScreen.classList.toggle("disappear");
     } else if (playerScore >= 3) {
         playerScore = 0;
         cpuScore = 0;
-        winPage.classList.toggle("disappear");
+        winScreen.classList.toggle("disappear");
     } else {
-        choicePage.classList.toggle('disappear');
+        choiceScreen.classList.toggle('disappear');
     }
 }
 
 function restart(e) {
     if (e.key.toLowerCase() === 'n') {
-        if ((winPage.getAttribute('class') == "disappear") && (losePage.getAttribute('class') == "disappear")) {
+        if ((winScreen.getAttribute('class') == "disappear") && (loseScreen.getAttribute('class') == "disappear")) {
             return;
-        } else if ((winPage.getAttribute('class') == "disappear")) {
-            losePage.classList.toggle("disappear");
-            colorScreen.classList.toggle('disappear');
-            document.getElementById('screen-background').classList.toggle('disappear');
-            finalPage.classList.toggle("disappear");
+        } else if ((winScreen.getAttribute('class') == "disappear")) {
+            loseScreen.classList.toggle("disappear");
+            colorLayer.classList.toggle('disappear');
+            screenBackground.classList.toggle('disappear');
+            finalScreen.classList.toggle("disappear");
         } else {
-            winPage.classList.toggle("disappear");
-            colorScreen.classList.toggle('disappear');
-            document.getElementById('screen-background').classList.toggle('disappear');
-            finalPage.classList.toggle("disappear");
+            winScreen.classList.toggle("disappear");
+            colorLayer.classList.toggle('disappear');
+            screenBackground.classList.toggle('disappear');
+            finalScreen.classList.toggle("disappear");
         }
     } else if (e.key.toLowerCase() === 'y') {
-        if ((winPage.getAttribute('class') == "disappear") && (losePage.getAttribute('class') == "disappear")) {
+        if ((winScreen.getAttribute('class') == "disappear") && (loseScreen.getAttribute('class') == "disappear")) {
             return;
-        } else if ((winPage.getAttribute('class') == "disappear")) {
-            losePage.classList.toggle("disappear");
-            introPage.classList.toggle("disappear");
+        } else if ((winScreen.getAttribute('class') == "disappear")) {
+            loseScreen.classList.toggle("disappear");
+            introScreen.classList.toggle("disappear");
         } else {
-            winPage.classList.toggle("disappear");
-            introPage.classList.toggle("disappear");
+            winScreen.classList.toggle("disappear");
+            introScreen.classList.toggle("disappear");
         }
     }
 }

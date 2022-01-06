@@ -1,116 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock Paper Scissors</title>
-        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Potta+One">
-        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Anton">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="screen-background" id="screen-background"></div>
-        <div class="color-layer" id="color-screen"></div>
-        <div class="intro-screen" id="intro">
-            <p class="background">You are in a heated battle with a mortal enemy.  Your life depends on your having
-                your wits about you and making use of the years of training you've spent with 
-                various masters of the sundry martial arts. Your final trial awaits as you face
-                your most deadly opponent: <span class="machine">THE MACHINE!</span> Your weapons in this deadly tete a tete
-                will be thus limited: to the following three weapons: here they are: listed
-                herein:
-            </p>
-            <h3 class="game-name"><span class="title-words">ROCK</span><span class=
-                "title-words">PAPER</span><span class="title-words">SCISSORS!!</span>
-            </h3>
-            <div class="start-btns-container">
-                <button class="start-btns" id="start">
-                    I ACCEPT THE CHALLENGE!!
-                </button>
-                <button class="start-btns" id="quit">
-                    I RUN IN TERROR!
-                </button>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Potta+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="screen-background"></div>
+    <div class="color-layer"></div>
+    <div class="intro-screen">
+        <p class="background">You are in a heated battle with a mortal enemy. Your life depends on your having
+            your wits about you and making use of the years of training you've spent with
+            various masters of the sundry martial arts. Your final trial awaits as you face
+            your most deadly opponent: <span class="machine">THE MACHINE!</span> Your weapons in this deadly tete a tete
+            will be thus limited: to the following three weapons: here they are: listed
+            herein:
+        </p>
+        <h3 class="game-name"><span class="title-words">ROCK</span><span class="title-words">PAPER</span><span
+                class="title-words">SCISSORS!!</span>
+        </h3>
+        <div class="start-btns-container">
+            <button class="start-btns start">
+                I ACCEPT THE CHALLENGE!!
+            </button>
+            <button class="start-btns quit">
+                I RUN IN TERROR!
+            </button>
+        </div>
+    </div>
+    <div class="disappear quit-screen">
+        <img class="chicken"
+            src="https://cms-assets.tutsplus.com/uploads/users/877/posts/31264/image/14-drawing-hen-applying-the-hatching.jpg">
+        <h1 class="admonishment">You are a big chicken. Reload page if you wish to make a more manly decision.</h1>
+    </div>
+    <div class="disappear choice-screen">
+        <h1 class="choose">CHOOSE YOUR WEAPON</h1>
+        <div class="hands-box">
+            <img class="hands rock-choice" src="images/rock.jpg">
+            <img class="hands paper-choice"
+                src="https://media.istockphoto.com/photos/male-flat-hand-on-white-pushing-down-picture-id184855957?k=6&m=184855957&s=170667a&w=0&h=FM-mDPx0I6Mcpd6EPF3lwAP8Dpv-DJwnfktyiHxxFk4=">
+            <img class="hands scissors-choice"
+                src="https://variety.com/wp-content/uploads/2015/12/edward-scissorhands.jpg">
+        </div>
+    </div>
+    <div class="disappear throw-screen">
+        <div class="throws-container">
+            <div class="blank-throws">
+                <h2 class="player-throws appearing-items">
+                    YOU THREW:
+                </h2>
+                <h2 class="cpu-throws appearing-items">
+                    COMPUTER THROWS:
+                </h2>
+            </div>
+            <div class="weapon-thrown">
+                <img class="player-weapon appearing-items" src="images/rock.jpg">
+                <img class="cpu-weapon appearing-items" src="images/scissors.jpg">
             </div>
         </div>
-        <div class="disappear" id="quit-screen">
-            <img class="chicken" src="https://cms-assets.tutsplus.com/uploads/users/877/posts/31264/image/14-drawing-hen-applying-the-hatching.jpg">
-            <h1 id="admonishment">You are a big chicken. Reload page if you wish to make a more manly decision.</h1>
+    </div>
+    <div class="tie-screen disappear">
+        <img class="tie-img" src="images/Tie.jpg">
+        <h2>You and <span class="machine">THE MACHINE</span> have come to an impasse this round.</h2>
+    </div>
+    <div class="scissors-screen disappear">
+        <div class="scissors-container">
+            <img class="scissors-loser" src="images/injuredperson1.jpg">
+            <img class="fight-picture" src="images/scissorsonpaper.jpg">
+            <img class="scissors-winner" src="images/cpuwinsscissors.jpg">
         </div>
-        <div class="disappear" id="choice-screen">
-            <h1 id="choose">CHOOSE YOUR WEAPON</h1>
-            <div id="hands-box">
-                <img class="hands" id="rock-choice" src="images/rock.jpg">
-                <img class="hands" id="paper-choice" src="https://media.istockphoto.com/photos/male-flat-hand-on-white-pushing-down-picture-id184855957?k=6&m=184855957&s=170667a&w=0&h=FM-mDPx0I6Mcpd6EPF3lwAP8Dpv-DJwnfktyiHxxFk4=">
-                <img class="hands" id="scissors-choice" src="https://variety.com/wp-content/uploads/2015/12/edward-scissorhands.jpg">
+        <h1 class="win-message">You win!</h1>
+        <h1 class="win-description">Scissors cuts Paper.</h1>
+    </div>
+    <div class="paper-or-rock-screen disappear">
+        <div class="paper-rock-container">
+            <div class="left-images">
+                <img class="paper-or-rock-winner">
+                <img class="fight-picture fight-two">
+                <img class="paper-or-rock-loser">
+            </div>
+            <div class="right-text">
+                <h1 class="win-message">You win!</h1>
+                <h1 class="win-description">Paper covers Rock.</h1>
             </div>
         </div>
-        <div class="disappear throw-screen" id="throw-id">
-            <div id="throws-container">
-                <div id="blank-throws">
-                    <h2 id="player-throws" class="appearing-items">
-                        YOU THREW:
-                    </h2>
-                    <h2 id="cpu-throws" class="appearing-items">
-                        COMPUTER THROWS:
-                    </h2>
-                </div>
-                <div id="weapon-thrown">
-                    <img id="player-weapon" class="appearing-items" src="images/rock.jpg">
-                    <img id="cpu-weapon" class="appearing-items" src="images/scissors.jpg">
-                </div>
+    </div>
+    <div class="score-screen disappear">
+        <h1>SCORE</h1>
+        <div class="scores">
+            <div class="player-score">
+                <h2>PLAYER</h2>
+                <h3>0</h3>
+            </div>
+            <div class="cpu-score">
+                <h2 class="machine">THE MACHINE</h2>
+                <h3>2</h3>
             </div>
         </div>
-        <div class= "disappear" id="tie-screen">
-            <img class="tie-img" src="images/Tie.jpg">
-            <h2>You and <span class="machine">THE MACHINE</span> have come to an impasse this round.</h2>
-        </div>
-        <div class="disappear" id="scissors-screen">
-            <div class="scissors-container">
-                <img id="scissors-loser" src="images/injuredperson1.jpg">
-                <img class="fight-picture" src="images/scissorsonpaper.jpg">
-                <img id="scissors-winner" src="images/cpuwinsscissors.png">
-            </div>
-            <h1 class="win-message">You win!</h1>
-            <h1 class="win-description">Scissors cuts Paper.</h1>
-        </div>
-        <div class="disappear" id="paper-or-rock-screen">
-            <div class="paper-rock-container">
-                <div class="left-images">
-                    <img id="paper-or-rock-winner">
-                    <img class="fight-picture fight-two">
-                    <img id="paper-or-rock-loser">
-                </div>
-                <div class="right-text">
-                    <h1 class="win-message">You win!</h1>
-                    <h1 class="win-description">Paper covers Rock.</h1>
-                </div>
-            </div>
-        </div>
-        <div class="disappear" id="score-screen">
-            <h1>SCORE</h1>
-            <div class="scores">
-                <div class="player-score">
-                    <h2>PLAYER</h2>
-                    <h3>0</h3>
-                </div>
-                <div class="cpu-score">
-                    <h2 class="machine">THE MACHINE</h2>
-                    <h3>2</h3>
-                </div>
-            </div>
-        </div>
-        <div class="disappear" id="lose-screen">
-            <h1>YOU LOSE!</h1>
-            <img src="images/deadperson.jpg">
-            <h3>Play again? (Press y/n)</h3>
-        </div>
-        <div class="disappear" id="win-screen">
-            <h1>YOU WIN!</h1>
-            <img src="images/deadcomputer.jpg">
-            <h3>Play again? (Press y/n)</h3>
-        </div>
-        <div class="disappear" id="final-screen">
-            <h3>Have a nice life.</h3>
-        </div>
-    </body>
-    <script src="code.js"></script>
+    </div>
+    <div class="lose-screen disappear">
+        <h1>YOU LOSE!</h1>
+        <img src="images/deadperson.jpg">
+        <h3>Play again? (Press y/n)</h3>
+    </div>
+    <div class="win-screen disappear">
+        <h1>YOU WIN!</h1>
+        <img src="images/deadcomputer.jpg">
+        <h3>Play again? (Press y/n)</h3>
+    </div>
+    <div class="final-screen disappear">
+        <h3>Have a nice life.</h3>
+    </div>
+</body>
+<script src="code.js"></script>
+
 </html>
