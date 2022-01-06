@@ -5,7 +5,7 @@
 
 const startButton = document.getElementById('start');
 const quitButton = document.getElementById('quit');
-const introPage = document.getElementById('intro'); 
+const introPage = document.getElementById('intro');
 const quitPage = document.getElementById('quit-screen');
 const colorScreen = document.getElementById('color-screen');
 const choicePage = document.getElementById('choice-screen');
@@ -87,10 +87,10 @@ function humanPlay(e) {
     if (e.target === rockChoice) {
         playerWeapon.setAttribute("src", "images/rock.jpg");
         return 'rock';
-    }else if (e.target === paperChoice) {
+    } else if (e.target === paperChoice) {
         playerWeapon.setAttribute("src", "images/paper.jpg");
         return 'paper';
-    }else if (e.target === scissorsChoice) {
+    } else if (e.target === scissorsChoice) {
         playerWeapon.setAttribute("src", "images/scissors.jpg");
         return 'scissors';
     }
@@ -134,7 +134,7 @@ const injuredCpuImages = ["images/injuredcpu1.jpg", "images/injuredcpu2.jpg", "i
 const injuredPersonImages = ["images/injuredperson1.jpg", "images/injuredperson2.jpg", "images/injuredperson3.jpg"];
 
 function showResults(results) {
-    
+
     if (results[0] == "tie") {
         return
     } else if (results[1] === 'Scissors cut Paper.') {
@@ -150,7 +150,6 @@ function showResults(results) {
         scissorsPage.querySelector(".win-description").textContent = results[1];
         return;
     } else {
-        console.log('halp!');
         let personWinsImage = (results[1] == 'Rock crushes Scissors.') ? "images/personwinsrock.jpg" : "images/personwinspaper.jpg";
         let cpuWinsImage = (results[1] == 'Rock crushes Scissors.') ? "images/cpuwinsrock.jpg" : "images/cpuwinspaper.jpg";
         let fightImage = (results[1] == 'Rock crushes Scissors.') ? "images/rockonscissors.jpg" : "images/paperonrock.jpg";
@@ -222,7 +221,7 @@ async function playRound(e) {
     for (let i = 0; i < appearingItemsLength; i++) {
         appearingItems[i].classList.toggle('make-visible');
     }
-    
+
     throwPage.classList.toggle('disappear');
     if (results[0] === 'tie') {
         tiePage.classList.toggle('disappear');
