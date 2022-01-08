@@ -12,4 +12,33 @@ html {
 
 body {
   box-sizing: border-box;
+  text-align: center;
+  height: 100vh;
+  min-height: 55rem;
+  display: flex;
+  justify-content: center;
+  align-items: safe center;
+  overflow-y: scroll;
+}
+
+.screen-background {
+  background-image: url("https://i.pinimg.com/originals/ff/cc/2a/ffcc2ac60d849dc43cbfcc3fca32a406.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.color-layer {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
 }

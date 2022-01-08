@@ -12,21 +12,12 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-body {
-  font-size: 3.2rem;
-  color: #fff;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
+  text-align: center;
+  height: 100vh;
+  min-height: 55rem;
   display: flex;
   justify-content: center;
+  align-items: safe center;
   overflow-y: scroll;
 }
 
@@ -37,8 +28,8 @@ body {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -47,44 +38,91 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+.instructions {
+  font-family: "Potta One";
+  font-size: 2.2vw;
+}
+
+.game-name {
+  font-size: 9rem;
+  font-family: "Josefin Sans";
+}
+
+.start-btns {
+  font-size: 3rem;
+  font-family: "Anton";
+  letter-spacing: 2px;
+  color: red;
+}
+
+.machine {
+  font-size: 1.2em;
+  font-family: monospace;
+  color: indianred;
+  font-weight: normal;
+}
+
+.admonishment {
+  color: #000;
+  font-size: 4rem;
+}
+
+.choose {
+  font-family: "Potta One";
+}
+
+.blank-throws {
+  font-family: "Josefin Sans";
+  font-weight: bolder;
+}
+
+.score-screen h1 {
+  font-size: 10rem;
+}
+
+.scores {
+  font-size: 4rem;
+}
+
+.final-screen h3 {
+  color: #000;
+  font-size: 8rem;
+  text-align: center;
 }
 
 .intro-screen {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
-  top: 30px;
   width: 100%;
-  flex-basis: 100%;
+  height: 80%;
 }
 
-.background {
-  text-align: center;
-  font-family: "Potta One";
-  font-size: 2.2vw;
+.instructions {
   margin: 0 auto;
-  margin-top: 40px;
   width: 90%;
-  padding: 0;
 }
 
 .game-name {
-  font-size: 90px;
-  margin: 60px auto;
-  text-align: center;
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  font-family: "Josefin Sans";
 }
 
 .title-words {
   display: block;
-  margin: 0 25px;
+  margin: 0 2.5rem;
 }
 
 .start-btns-container {
@@ -95,61 +133,51 @@ body {
 }
 
 .start-btns {
-  font-size: 30px;
-  height: 100px;
-  width: 250px;
+  height: 10rem;
+  width: 25rem;
   background-color: #fdff5c;
-  color: red;
   border: none;
   border-radius: 15px;
-  font-family: "Anton";
-  letter-spacing: 2px;
 }
 
 .start-btns:hover {
   cursor: pointer;
 }
 
-.machine {
-  font-size: 1.2em;
-  font-family: monospace;
-  color: indianred;
-}
-
-.delete-bgrnd {
-  background: none;
-}
-
-.quit-screen {
-  height: 100vh;
-}
-
 .chicken {
   display: block;
-  width: 650px;
+  width: 65rem;
   margin: 0 auto;
 }
 
 .admonishment {
-  color: #000;
-  font-size: 40px;
-  text-align: center;
-  width: 900px;
+  width: 90rem;
   margin: 0 auto;
 }
 
-.choose {
-  font-family: "Potta One";
-  text-align: center;
+.choice-screen {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.hands-box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .hands {
-  width: 250px;
+  width: 25rem;
   border-radius: 50%;
   display: block;
-  margin: 60px auto;
-  box-shadow: 4px 5px 80px #fff;
-  box-shadow: -4px -5px 80px #fff;
+  margin: 6rem auto;
+  box-shadow: 4px 5px 8rem #fff;
+  box-shadow: -4px -5px 8rem #fff;
   cursor: pointer;
 }
 
@@ -164,25 +192,23 @@ body {
 }
 
 .blank-throws {
-  font-family: "Josefin Sans";
-  font-weight: bolder;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .weapon-thrown {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .weapon-thrown img {
   display: block;
-  width: 300px;
-  box-shadow: 4px 5px 45px red;
+  width: 30rem;
+  box-shadow: 4px 5px 4.5rem red;
   height: intrinsic;
 }
 
@@ -191,46 +217,41 @@ body {
 }
 
 .cpu-throws {
-  width: 300px;
-  text-align: center;
+  width: 30rem;
 }
 
 .tie-img {
   display: block;
-  width: 350px;
+  width: 35rem;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 4rem;
   border-radius: 20%;
 }
 
 .tie-screen h2 {
-  max-width: 650px;
+  max-width: 65rem;
 }
 
 .scissors-container {
   display: flex;
   width: 80%;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .scissors-loser {
-  height: 300px;
+  height: 30rem;
   border-radius: 50%;
 }
 
 .fight-picture {
-  width: 400px;
-  margin: 0 50px;
+  width: 40rem;
+  margin: 0 5rem;
 }
 
 .scissors-winner {
-  height: 300px;
+  height: 30rem;
   border-radius: 50%;
-}
-
-.scissors-screen h1 {
-  text-align: center;
 }
 
 .paper-rock-container {
@@ -246,42 +267,39 @@ body {
 }
 
 .paper-or-rock-winner {
-  height: 175px;
+  height: 17.5rem;
   border-radius: 50%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 5rem;
   display: block;
 }
 
 .fight-two {
-  width: 400px;
-  margin: 30px auto;
+  width: 40rem;
+  margin: 3rem auto;
   display: block;
 }
 
 .paper-or-rock-loser {
-  height: 175px;
+  height: 17.5rem;
   border-radius: 50%;
   margin: 0 auto;
   display: block;
 }
 
 .paper-or-rock-screen h1 {
-  text-align: center;
   margin: 0;
 }
 
 .score-screen {
   width: 80%;
-  margin: 40px auto;
+  margin: 4rem auto;
 }
 
 .score-screen h1 {
-  font-size: 100px;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
   width: 65%;
-  margin: 30px auto;
+  margin: 3rem auto;
   border-radius: 10px;
 }
 
@@ -292,32 +310,12 @@ body {
   border-radius: 15px;
 }
 
-.player-score {
-  text-align: center;
-  font-size: 40px;
-}
-
-.cpu-score {
-  font-size: 50px;
-  text-align: center;
-}
-
-.cpu-score h3 {
-  font-size: 40px;
-}
-
 .lose-screen img {
   display: block;
 }
 
 .win-screen img {
   display: block;
-}
-
-.final-screen h3 {
-  color: #000;
-  font-size: 80px;
-  text-align: center;
 }
 
 .make-visible {

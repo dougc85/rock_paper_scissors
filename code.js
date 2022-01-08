@@ -12,12 +12,12 @@ const colorLayer = document.querySelector('.color-layer');
 
 const handsBox = document.querySelector('.hands-box');
 const choiceScreen = document.querySelector('.choice-screen');
-const throwScreen = document.querySelector('throw-screen');
+const throwScreen = document.querySelector('.throw-screen');
 const tieScreen = document.querySelector('.tie-screen');
 
 const scissorsScreen = document.querySelector('.scissors-screen');
-const scissorsLoser = scissorsScreen.querySelector('#scissors-loser');
-const scissorsWinner = scissorsScreen.querySelector('#scissors-winner');
+const scissorsLoser = scissorsScreen.querySelector('.scissors-loser');
+const scissorsWinner = scissorsScreen.querySelector('.scissors-winner');
 
 
 const paperOrRockScreen = document.querySelector(".paper-or-rock-screen");
@@ -40,7 +40,6 @@ document.addEventListener('keyup', restart);
 
 //Functions for Intro Page
 function startGame(e) {
-    console.log('pooping');
     introScreen.classList.toggle('disappear');
     choiceScreen.classList.toggle('disappear');
 }

@@ -2,3 +2,55 @@ body {
   font-size: 3.2rem;
   color: $color-white;
 }
+
+.instructions {
+  font-family: $storybook-font;
+  font-size: 2.2vw;
+}
+
+.game-name {
+  font-size: 9rem;
+  font-family: $boring-font;
+}
+
+.start-btns {
+  font-size: 3rem;
+  font-family: "Anton";
+  letter-spacing: 2px;
+  color: red;
+}
+
+.machine {
+  font-size: 1.2em;
+  font-family: monospace;
+  color: indianred;
+  font-weight: normal;
+}
+
+.admonishment {
+  color: $color-black;
+  font-size: 4rem;
+}
+
+.choose {
+  font-family: $storybook-font;
+}
+
+.blank-throws {
+  font-family: $boring-font;
+  font-weight: bolder;
+}
+
+.score-screen h1 {
+  font-size: 10rem;
+}
+
+.scores {
+  font-size: 4rem;
+}
+
+.final-screen h3 {
+  color: $color-black;
+  font-size: 8rem;
+  text-align: center;
+}
