@@ -1,0 +1,37 @@
+.lose-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+}
+
+.win-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
+
+.dead-loser {
+  display: block;
+  width: 30rem;
+}
+
+.dead-computer {
+  display: block;
+  width: 30rem;
+  border-radius: 10px;
+}
+
+.keys {
+  display: inline-block;
+  width: 5rem;
+  transform: translateY(1.2rem);
+  cursor: pointer;
+}
+
+.n-key {
+  margin-right: -.3rem;
+}

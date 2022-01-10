@@ -1,0 +1,25 @@
+.choice-screen {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.hands-box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hands {
+  width: 25rem;
+  border-radius: 50%;
+  display: block;
+  margin: 6rem auto;
+  box-shadow: 4px 5px 8rem $color-white;
+  box-shadow: -4px -5px 8rem $color-white;
+  cursor: pointer;
+}

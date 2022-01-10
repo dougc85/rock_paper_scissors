@@ -5,12 +5,16 @@ body {
 
 .instructions {
   font-family: $storybook-font;
-  font-size: 2.2vw;
+  font-size: 2.5rem;
 }
 
 .game-name {
   font-size: 9rem;
   font-family: $boring-font;
+
+  @include media(phone-small) {
+    font-size: 7rem;
+  }
 }
 
 .start-btns {

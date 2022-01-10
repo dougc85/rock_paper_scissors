@@ -8,6 +8,26 @@
 
 html {
   font-size: 62.5%;
+
+  @include media(landscape-tab) {
+    font-size: 55%;
+  }
+
+  @include media (landscape-tab-small) {
+    font-size: 45%;
+  }
+
+  @include media (portrait-tab) {
+    font-size: 40%;
+  }
+
+  @include media (phone) {
+    font-size: 35%;
+  }
+
+  @include media (phone-small) {
+    font-size: 30%;
+  }
 }
 
 body {
@@ -31,6 +51,16 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+
+  @include media(phone) {
+    background-position: 20% 15%;
+    background-size: 330%;
+  }
+
+  @include media(phone-small) {
+    background-position: 22% 5%;
+    background-size: 500%;
+  }
 }
 
 .color-layer {

@@ -1,0 +1,39 @@
+.throw-screen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.throws-container {
+  flex-basis: 100%;
+}
+
+
+.blank-throws {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.weapon-thrown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.weapon-thrown img {
+  display: block;
+  width: 30rem;
+  box-shadow: 4px 5px 4.5rem red;
+  height: intrinsic;
+}
+
+.appearing-items {
+  visibility: hidden;
+}
+
+.cpu-throws {
+  width: 30rem;
+}

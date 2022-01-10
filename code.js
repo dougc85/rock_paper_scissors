@@ -34,9 +34,13 @@ const finalScreen = document.querySelector(".final-screen");
 const yKeys = Array.from(document.querySelectorAll(".y-key"));
 const nKeys = Array.from(document.querySelectorAll(".n-key"));
 
-(yKeys.concat(nKeys)).forEach(key => {
+yKeys.forEach(key => {
     key.addEventListener('click', restart);
 });
+
+nKeys.forEach(key => {
+    key.addEventListener('click', toExitScreen);
+})
 
 //Events for Intro Page
 startButton.addEventListener('click', startGame);
@@ -283,7 +287,7 @@ function readKeypress(e) {
 }
 
 function toExitScreen() {
-    if ((winScreen.getAttribute('class') == "disappear")) {
+    if (winScreen.classList.contains("disappear")) {
         loseScreen.classList.toggle("disappear");
         colorLayer.classList.toggle('disappear');
         screenBackground.classList.toggle('disappear');
@@ -297,7 +301,7 @@ function toExitScreen() {
 }
 
 function restart() {
-    if ((winScreen.getAttribute('class') == "disappear")) {
+    if (winScreen.classList.contains('disappear')) {
         loseScreen.classList.toggle("disappear");
         introScreen.classList.toggle("disappear");
     } else {

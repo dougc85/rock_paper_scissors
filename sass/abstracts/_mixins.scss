@@ -1,0 +1,31 @@
+@mixin media($breakpoint) {
+  @if $breakpoint == phone-small {
+    @media only screen and (max-width: 440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 500px) {
+      @content
+    };
+  }
+
+  @if $breakpoint == portrait-tab {
+    @media only screen and (max-width: 850px) {
+      @content
+    };
+  }
+
+  @if $breakpoint == landscape-tab-small {
+    @media only screen and (max-width: 1050px) {
+      @content
+    };
+  }
+
+  @if $breakpoint == landscape-tab {
+    @media only screen and (max-width: 1200px) {
+      @content
+    };
+  }
+}

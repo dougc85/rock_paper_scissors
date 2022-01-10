@@ -1,0 +1,84 @@
+.tie-screen {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tie-img {
+  display: block;
+  width: 30rem;
+  margin: 0 auto;
+  border-radius: 20%;
+}
+
+.tie-screen h2 {
+  max-width: 65rem;
+}
+
+.scissors-screen {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.scissors-container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.scissors-loser {
+  height: 30rem;
+  border-radius: 50%;
+}
+
+.fight-picture {
+  width: 40rem;
+  margin: 0 5rem;
+}
+
+.scissors-winner {
+  height: 30rem;
+  border-radius: 50%;
+}
+
+.paper-rock-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paper-or-rock-winner {
+  height: 17.5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: block;
+}
+
+.fight-two {
+  width: 40rem;
+  margin: 3rem auto;
+  display: block;
+}
+
+.paper-or-rock-loser {
+  height: 17.5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.paper-or-rock-screen h1 {
+  margin: 0;
+}
