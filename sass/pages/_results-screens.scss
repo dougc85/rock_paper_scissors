@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @include media(phone-landscape) {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .tie-img {
@@ -10,10 +18,16 @@
   width: 30rem;
   margin: 0 auto;
   border-radius: 20%;
+  @include media(phone-landscape) {
+    margin-right: 1rem;
+  }
 }
 
 .tie-screen h2 {
   max-width: 65rem;
+  @include media(phone-landscape) {
+    margin-left: 1rem;
+  }
 }
 
 .scissors-screen {

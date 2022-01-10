@@ -328,6 +328,15 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+  .tie-screen {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .tie-img {
   display: block;
@@ -335,9 +344,19 @@ body {
   margin: 0 auto;
   border-radius: 20%;
 }
+@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+  .tie-img {
+    margin-right: 1rem;
+  }
+}
 
 .tie-screen h2 {
   max-width: 65rem;
+}
+@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+  .tie-screen h2 {
+    margin-left: 1rem;
+  }
 }
 
 .scissors-screen {
