@@ -135,16 +135,30 @@
   width: 30rem;
 }
 
+.tie-screen {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .tie-img {
   display: block;
-  width: 35rem;
+  width: 30rem;
   margin: 0 auto;
-  margin-top: 4rem;
   border-radius: 20%;
 }
 
 .tie-screen h2 {
   max-width: 65rem;
+}
+
+.scissors-screen {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
 }
 
 .scissors-container {
@@ -207,26 +221,41 @@
 }
 
 .score-screen {
-  width: 80%;
-  margin: 4rem auto;
-}
-
-.score-screen h1 {
-  background-color: rgba(0, 0, 0, .4);
-  width: 65%;
-  margin: 3rem auto;
-  border-radius: 10px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .scores {
   display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, .4);
+  justify-content: space-evenly;
   border-radius: 15px;
 }
 
-.lose-screen img {
+.lose-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+}
+
+.dead-loser {
   display: block;
+  width: 30rem;
+}
+
+.keys {
+  display: inline-block;
+  width: 5rem;
+  transform: translateY(1.2rem);
+}
+
+.n-key {
+  margin-right: -.3rem;
 }
 
 .win-screen img {
