@@ -327,9 +327,23 @@ body {
   height: 60%;
 }
 
+.win-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
+
 .dead-loser {
   display: block;
   width: 30rem;
+}
+
+.dead-computer {
+  display: block;
+  width: 30rem;
+  border-radius: 10px;
 }
 
 .keys {
@@ -340,10 +354,6 @@ body {
 
 .n-key {
   margin-right: -0.3rem;
-}
-
-.win-screen img {
-  display: block;
 }
 
 .make-visible {

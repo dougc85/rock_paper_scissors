@@ -31,12 +31,15 @@ const loseScreen = document.querySelector(".lose-screen");
 const winScreen = document.querySelector(".win-screen");
 const finalScreen = document.querySelector(".final-screen");
 
+const yKey = document.querySelector(".y-key");
+const nKey = document.querySelector(".n-key");
+
+yKey.addEventListener('click', restart);
+nKey.addEventListener('click', toExitScreen);
+
 //Events for Intro Page
 startButton.addEventListener('click', startGame);
 quitButton.addEventListener('click', quitGame);
-
-//Events for Win/Lose Page
-document.addEventListener('keyup', restart);
 
 //Functions for Intro Page
 function startGame(e) {
@@ -221,7 +224,7 @@ async function playRound(e) {
     await sleep(500);
     for (let i = 0; i < appearingItemsLength; i++) {
         appearingItems[i].classList.toggle('make-visible');
-        await sleep(1000);
+        await sleep(10);
     }
 
     //Array of [winner, throw-winner, message]
@@ -257,39 +260,47 @@ async function playRound(e) {
         cpuScore = 0;
         playerScore = 0;
         loseScreen.classList.toggle("disappear");
+        document.addEventListener('keyup', readKeypress);
     } else if (playerScore >= 3) {
         playerScore = 0;
         cpuScore = 0;
         winScreen.classList.toggle("disappear");
+        document.addEventListener('keyup', readKeypress);
     } else {
         choiceScreen.classList.toggle('disappear');
     }
 }
 
-function restart(e) {
+function readKeypress(e) {
     if (e.key.toLowerCase() === 'n') {
-        if ((winScreen.getAttribute('class') == "disappear") && (loseScreen.getAttribute('class') == "disappear")) {
-            return;
-        } else if ((winScreen.getAttribute('class') == "disappear")) {
-            loseScreen.classList.toggle("disappear");
-            colorLayer.classList.toggle('disappear');
-            screenBackground.classList.toggle('disappear');
-            finalScreen.classList.toggle("disappear");
-        } else {
-            winScreen.classList.toggle("disappear");
-            colorLayer.classList.toggle('disappear');
-            screenBackground.classList.toggle('disappear');
-            finalScreen.classList.toggle("disappear");
-        }
+        document.removeEventListener('keyup', readKeypress);
+        toExitScreen();
     } else if (e.key.toLowerCase() === 'y') {
-        if ((winScreen.getAttribute('class') == "disappear") && (loseScreen.getAttribute('class') == "disappear")) {
-            return;
-        } else if ((winScreen.getAttribute('class') == "disappear")) {
-            loseScreen.classList.toggle("disappear");
-            introScreen.classList.toggle("disappear");
-        } else {
-            winScreen.classList.toggle("disappear");
-            introScreen.classList.toggle("disappear");
-        }
+        restart();
+        document.removeEventListener('keyup', readKeypress);
+    }
+}
+
+function toExitScreen() {
+    if ((winScreen.getAttribute('class') == "disappear")) {
+        loseScreen.classList.toggle("disappear");
+        colorLayer.classList.toggle('disappear');
+        screenBackground.classList.toggle('disappear');
+        finalScreen.classList.toggle("disappear");
+    } else {
+        winScreen.classList.toggle("disappear");
+        colorLayer.classList.toggle('disappear');
+        screenBackground.classList.toggle('disappear');
+        finalScreen.classList.toggle("disappear");
+    }
+}
+
+function restart() {
+    if ((winScreen.getAttribute('class') == "disappear")) {
+        loseScreen.classList.toggle("disappear");
+        introScreen.classList.toggle("disappear");
+    } else {
+        winScreen.classList.toggle("disappear");
+        introScreen.classList.toggle("disappear");
     }
 }
