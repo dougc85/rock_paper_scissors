@@ -1,8 +1,13 @@
 @mixin media($breakpoint) {
+  @if $breakpoint == phone-extra-small {
+    @media only screen and (max-width: 350px) {
+      @content
+    };
+  }
   @if $breakpoint == phone-small {
     @media only screen and (max-width: 440px) {
-      @content;
-    }
+      @content
+    };
   }
 
   @if $breakpoint == phone {
@@ -11,19 +16,27 @@
     };
   }
 
-  @if $breakpoint == portrait-tab {
-    @media only screen and (max-width: 850px) {
+  @if $breakpoint == phone-landscape {
+    @media only screen and (max-device-width: 850px) 
+                       and (orientation: landscape) {
+      @content
+  };
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 850px) 
+                       and (orientation: portrait) {
       @content
     };
   }
 
-  @if $breakpoint == landscape-tab-small {
+  @if $breakpoint == tab-landscape-small {
     @media only screen and (max-width: 1050px) {
       @content
     };
   }
 
-  @if $breakpoint == landscape-tab {
+  @if $breakpoint == tab-landscape {
     @media only screen and (max-width: 1200px) {
       @content
     };

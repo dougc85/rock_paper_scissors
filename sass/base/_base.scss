@@ -9,15 +9,19 @@
 html {
   font-size: 62.5%;
 
-  @include media(landscape-tab) {
+  @include media(tab-landscape) {
     font-size: 8.8px;
   }
 
-  @include media (landscape-tab-small) {
+  @include media (tab-landscape-small) {
     font-size: 7.2px;
   }
 
-  @include media (portrait-tab) {
+  @include media (tab-portrait) {
+    font-size: 7.8px;
+  }
+
+  @include media (phone-landscape) {
     font-size: 6.4px;
   }
 
@@ -25,8 +29,8 @@ html {
     font-size: 5.6px;
   }
 
-  @include media (phone-small) {
-    font-size: 4.8px;
+  @include media (phone-extra-small) {
+    font-size: 4.5px;
   }
 }
 
@@ -34,19 +38,20 @@ body {
   box-sizing: border-box;
   text-align: center;
   height: 100vh;
-  min-height: 55rem;
+  min-height: 40rem;
   display: flex;
   justify-content: center;
-  align-items: safe center;
+  align-items: center;
   overflow-y: scroll;
+  padding: 2rem;
 }
 
 .screen-background {
   background-image: url("https://i.pinimg.com/originals/ff/cc/2a/ffcc2ac60d849dc43cbfcc3fca32a406.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;

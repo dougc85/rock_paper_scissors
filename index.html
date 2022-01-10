@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Potta+One">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
@@ -39,7 +40,7 @@
             src="https://cms-assets.tutsplus.com/uploads/users/877/posts/31264/image/14-drawing-hen-applying-the-hatching.jpg">
         <h1 class="admonishment">You are a big chicken. Reload page if you wish to make a more manly decision.</h1>
     </div>
-    <div class="disappear choice-screen">
+    <div class="choice-screen disappear">
         <h1 class="choose">CHOOSE YOUR WEAPON</h1>
         <div class="hands-box">
             <img class="hands rock-choice" src="images/rock.jpg">
@@ -49,20 +50,18 @@
                 src="https://variety.com/wp-content/uploads/2015/12/edward-scissorhands.jpg">
         </div>
     </div>
-    <div class="disappear throw-screen">
-        <div class="throws-container">
-            <div class="blank-throws">
-                <h2 class="player-throws appearing-items">
-                    YOU THREW:
-                </h2>
-                <h2 class="cpu-throws appearing-items">
-                    COMPUTER THROWS:
-                </h2>
-            </div>
-            <div class="weapon-thrown">
-                <img class="player-weapon appearing-items" src="images/rock.jpg">
-                <img class="cpu-weapon appearing-items" src="images/scissors.jpg">
-            </div>
+    <div class="throw-screen disappear">
+        <div class="player-action throw-action">
+            <h2 class="player-throws appearing-items">
+                YOU THREW:
+            </h2>
+            <img class="weapon-thrown player-weapon appearing-items" src="images/rock.jpg">
+        </div>
+        <div class="cpu-action throw-action">
+            <h2 class="cpu-throws appearing-items">
+                COMPUTER THROWS:
+            </h2>
+            <img class="weapon-thrown cpu-weapon appearing-items" src="images/scissors.jpg">
         </div>
     </div>
     <div class="tie-screen disappear">

@@ -12,6 +12,10 @@ body {
   font-size: 9rem;
   font-family: $boring-font;
 
+  @include media(phone-landscape) {
+    font-size: 6rem;
+  }
+
   @include media(phone-small) {
     font-size: 7rem;
   }

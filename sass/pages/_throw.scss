@@ -1,39 +1,41 @@
 .throw-screen {
   width: 100%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  height: 60%;
+
+  @include media(tab-portrait) {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
-.throws-container {
-  flex-basis: 100%;
-}
-
-
-.blank-throws {
+.throw-action {
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 4rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @include media(tab-portrait) {
+    height: 40%;
+  }
+}
+
+.cpu-action {
+  margin-top: -2rem;
 }
 
 .weapon-thrown {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 4rem;
-}
-
-.weapon-thrown img {
   display: block;
   width: 30rem;
   box-shadow: 4px 5px 4.5rem red;
   height: intrinsic;
 }
 
-.appearing-items {
-  visibility: hidden;
-}
-
 .cpu-throws {
   width: 30rem;
+}
+
+.appearing-items {
+  visibility: hidden;
 }
