@@ -48,13 +48,24 @@
   padding: 0 1rem;
 }
 
-.chicken{
+.quit-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+}
+
+.chicken {
   display: block;
-  width: 65rem;
-  margin: 0 auto;
+  width: 50rem;
+  margin: -4rem auto;
+  margin-top: -15rem;
+  border: 1px solid green;
 }
 
 .admonishment {
   width: 90rem;
-  margin: 0 auto;
+  margin: 0 5rem;
+  border: 1px solid red;
 }
