@@ -31,11 +31,12 @@ const loseScreen = document.querySelector(".lose-screen");
 const winScreen = document.querySelector(".win-screen");
 const finalScreen = document.querySelector(".final-screen");
 
-const yKey = document.querySelector(".y-key");
-const nKey = document.querySelector(".n-key");
+const yKeys = Array.from(document.querySelectorAll(".y-key"));
+const nKeys = Array.from(document.querySelectorAll(".n-key"));
 
-yKey.addEventListener('click', restart);
-nKey.addEventListener('click', toExitScreen);
+(yKeys.concat(nKeys)).forEach(key => {
+    key.addEventListener('click', restart);
+});
 
 //Events for Intro Page
 startButton.addEventListener('click', startGame);

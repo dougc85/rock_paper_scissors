@@ -350,6 +350,7 @@ body {
   display: inline-block;
   width: 5rem;
   transform: translateY(1.2rem);
+  cursor: pointer;
 }
 
 .n-key {
