@@ -1,8 +1,12 @@
 .tie-screen {
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  h2 {
+    max-width: 65rem;
+  }
 
   @include media(phone-landscape) {
     height: 100%;
@@ -10,12 +14,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    h2 {
+      margin-left: 1rem;
+    }
   }
 }
 
 .tie-img {
   display: block;
-  width: 30rem;
+  width: 27rem;
   margin: 0 auto;
   border-radius: 20%;
   @include media(phone-landscape) {
@@ -23,41 +31,55 @@
   }
 }
 
-.tie-screen h2 {
-  max-width: 65rem;
-  @include media(phone-landscape) {
-    margin-left: 1rem;
-  }
+.win-message {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.win-description {
+  display: block;
 }
 
 .scissors-screen {
-  height: 70%;
+  height: 90%;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
+  border: 1px solid blue;
 
+  h1 {
+    border: 1px solid green;
+  }
 }
 
 .scissors-container {
+  width: 100%;
   display: flex;
-  width: 80%;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 4rem;
+  border: 1px solid red;
+  }
+
+.scissors-players-container {
+  width: 27rem;
 }
 
-.scissors-loser {
-  height: 30rem;
+.scissors-players {
+  width: 100%;
   border-radius: 50%;
+}
+
+.fight-picture-container {
+  width: 40rem;
+  padding: 0 2rem;
+  border: 1px solid green;
 }
 
 .fight-picture {
-  width: 40rem;
-  margin: 0 5rem;
-}
-
-.scissors-winner {
-  height: 30rem;
-  border-radius: 50%;
+  width: 100%;
 }
 
 .paper-rock-container {

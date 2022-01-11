@@ -43,6 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding: 2rem;
 }
 
@@ -56,6 +57,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  overflow-x: hidden;
 
   @include media(phone) {
     background-position: 20% 15%;
@@ -76,4 +78,5 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
 }
