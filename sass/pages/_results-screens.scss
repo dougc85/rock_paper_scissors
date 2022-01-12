@@ -31,14 +31,24 @@
   }
 }
 
+.results-text-scissors {
+  @include media(phone-landscape) {
+    transform: scale(.8);
+    white-space:nowrap;
+  }
+}
+
 .win-message {
   display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
 
-.win-description {
-  display: block;
+  &-scissors {
+    @include media(phone-landscape) {
+      display: inline-block;
+      color: red !important;
+    }
+  }
 }
 
 .scissors-screen {
@@ -48,10 +58,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid blue;
 
-  h1 {
-    border: 1px solid green;
+  @include media(tab-portrait) {
+    justify-content: space-evenly;
   }
 }
 
@@ -60,61 +69,90 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
   }
 
 .scissors-players-container {
   width: 27rem;
+
+  @include media(phone-landscape) {
+    width: 23rem;
+  }
 }
 
 .scissors-players {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
 .fight-picture-container {
   width: 40rem;
   padding: 0 2rem;
-  border: 1px solid green;
+
+  @include media(phone-landscape) {
+    width: 35rem;
+  }
 }
 
-.fight-picture {
+.fight-one {
   width: 100%;
 }
 
-.paper-rock-container {
-  width: 100vw;
+.paper-or-rock-screen {
+  height: 100%;
+  width: 90%;
   display: flex;
+  justify-content: space-evenly;
+
+  @include media(tab-portrait) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  @include media(phone) {
+    justify-content: space-evenly;
+  }
+}
+
+.paper-rock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
-.right-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.paper-or-rock-winner {
+.paper-rock-players-container {
   height: 17.5rem;
   border-radius: 50%;
-  margin: 0 auto;
-  margin-top: 5rem;
-  display: block;
+  min-height: 0;
+}
+
+.paper-rock-players {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.paper-rock-fight-container {
+  height: 23rem;
+  min-height: 0;
+  margin: 2rem 0;
 }
 
 .fight-two {
-  width: 40rem;
-  margin: 3rem auto;
-  display: block;
+  height: 100%;
+  object-fit: contain;
 }
 
-.paper-or-rock-loser {
-  height: 17.5rem;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: block;
-}
+.results-text-paper-rock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.paper-or-rock-screen h1 {
-  margin: 0;
+  @include media(phone) {
+    transform: scale(1.2);
+  }
 }

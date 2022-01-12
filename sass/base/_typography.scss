@@ -56,6 +56,10 @@ body {
 
 .scores {
   font-size: 4rem;
+
+  @include media(phone) {
+    font-size: 3rem;
+  }
 }
 
 .final-screen h3 {
