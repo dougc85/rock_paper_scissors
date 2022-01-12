@@ -229,7 +229,7 @@ async function playRound(e) {
     await sleep(500);
     for (let i = 0; i < appearingItemsLength; i++) {
         appearingItems[i].classList.toggle('make-visible');
-        await sleep(10);
+        await sleep(1000);
     }
 
     //Array of [winner, throw-winner, message]

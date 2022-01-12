@@ -41,4 +41,10 @@
       @content
     };
   }
+
+  @if $breakpoint == narrow-vertical {
+    @media only screen and (max-height: 800px) {
+      @content
+    };
+  }
 }
