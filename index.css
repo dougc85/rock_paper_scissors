@@ -319,7 +319,6 @@ body {
   display: block;
   width: 30rem;
   box-shadow: 4px 5px 4.5rem red;
-  height: intrinsic;
 }
 
 .cpu-throws {
