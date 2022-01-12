@@ -24,7 +24,7 @@ html {
     font-size: 7.8px;
   }
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   html {
     font-size: 6.4px;
   }
@@ -103,7 +103,7 @@ body {
   font-size: 9rem;
   font-family: "Josefin Sans";
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .game-name {
     font-size: 6rem;
   }
@@ -339,7 +339,7 @@ body {
 .tie-screen h2 {
   max-width: 65rem;
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .tie-screen {
     height: 100%;
     width: 100%;
@@ -358,13 +358,13 @@ body {
   margin: 0 auto;
   border-radius: 20%;
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .tie-img {
     margin-right: 1rem;
   }
 }
 
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .results-text-scissors {
     transform: scale(0.8);
     white-space: nowrap;
@@ -376,7 +376,7 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .win-message-scissors {
     display: inline-block;
     color: red !important;
@@ -407,7 +407,7 @@ body {
 .scissors-players-container {
   width: 27rem;
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .scissors-players-container {
     width: 23rem;
   }
@@ -423,7 +423,7 @@ body {
   width: 40rem;
   padding: 0 2rem;
 }
-@media only screen and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .fight-picture-container {
     width: 35rem;
   }
